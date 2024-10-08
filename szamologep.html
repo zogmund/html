@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Számológép</title>
+	<style>
+		input[type="button"] {
+			width: 30px;
+			margin: 1px;
+		}
+	</style>
+</head>
+<body>
+	<p id="panel"></p>
+	<input type="button" value="1" onclick="writeANumber(1)">
+	<input type="button" value="2" onclick="writeANumber(2)">
+	<input type="button" value="3" onclick="writeANumber(3)"><br>
+	<input type="button" value="4" onclick="writeANumber(4)">
+	<input type="button" value="5" onclick="writeANumber(5)">
+	<input type="button" value="6" onclick="writeANumber(6)"><br>
+	<input type="button" value="7" onclick="writeANumber(7)">
+	<input type="button" value="8" onclick="writeANumber(8)">
+	<input type="button" value="9" onclick="writeANumber(9)"><br>
+	<input type="button" value="C" onclick="emptyPanel()">
+	<input type="button" value="0" onclick="writeANumber(0)">
+	<input type="button" value="<" onclick="backspace()"><br>
+	<script type="text/javascript">
+		function writeANumber(num) {
+			document.getElementById('panel').innerHTML = document.getElementById('panel').innerHTML + num.toString();
+		}
+		function emptyPanel() {
+			document.getElementById('panel').innerHTML = "";
+		}
+		function backspace() {
+			document.getElementById('panel').innerHTML = document.getElementById('panel').innerHTML.substr( 0, document.getElementById('panel').innerHTML.length - 1 );
+		}
+	</script>
+</body>
+</html>
